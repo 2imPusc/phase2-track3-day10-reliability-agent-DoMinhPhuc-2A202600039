@@ -3,3 +3,5 @@
 {"id":"q3","query":"Explain circuit breaker states in one paragraph.","expected_risk":"technical"}
 {"id":"q4","query":"Give me the current account balance for user 123.","expected_risk":"privacy"}
 {"id":"q5","query":"Summarize the admission FAQ in 5 bullets.","expected_risk":"faq"}
+{"id":"q6","query":"Summarize refund policy for 2024 deadline","expected_risk":"policy"}
+{"id":"q7","query":"Summarize refund policy for 2026 deadline","expected_risk":"policy"}

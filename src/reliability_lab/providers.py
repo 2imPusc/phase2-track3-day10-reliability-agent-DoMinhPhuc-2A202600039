@@ -30,8 +30,10 @@ class FakeLLMProvider:
         self.fail_rate = fail_rate
         self.base_latency_ms = base_latency_ms
         self.cost_per_1k_tokens = cost_per_1k_tokens
+        self.call_count = 0
 
     def complete(self, prompt: str) -> ProviderResponse:
+        self.call_count += 1
         start = time.perf_counter()
         jitter_ms = random.randint(0, 60)
         time.sleep((self.base_latency_ms + jitter_ms) / 1000.0)

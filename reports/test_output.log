@@ -1,0 +1,37 @@
+============================= test session starts =============================
+platform win32 -- Python 3.11.9, pytest-9.0.3, pluggy-1.6.0 -- C:\Users\Khaph\AppData\Local\Programs\Python\Python311\python.exe
+cachedir: .pytest_cache
+rootdir: D:\VinUni\Track3\phase2-track3-day10-reliability-agent
+configfile: pyproject.toml
+testpaths: tests
+plugins: anyio-4.13.0, Faker-40.15.0, langsmith-0.7.26
+collecting ... collected 26 items
+
+tests/test_circuit_breaker.py::test_closed_to_open_at_threshold PASSED   [  3%]
+tests/test_circuit_breaker.py::test_open_fails_fast PASSED               [  7%]
+tests/test_circuit_breaker.py::test_open_to_half_open_after_timeout PASSED [ 11%]
+tests/test_circuit_breaker.py::test_half_open_failure_reopens_immediately PASSED [ 15%]
+tests/test_circuit_breaker.py::test_half_open_success_closes_after_threshold PASSED [ 19%]
+tests/test_circuit_breaker.py::test_transition_log_records_open_and_close PASSED [ 23%]
+tests/test_circuit_breaker.py::test_call_raises_circuit_open_error_when_open PASSED [ 26%]
+tests/test_config.py::test_default_config_loads PASSED                   [ 30%]
+tests/test_config.py::test_scenarios_loaded PASSED                       [ 34%]
+tests/test_gateway_contract.py::test_gateway_returns_response_with_route_reason PASSED [ 38%]
+tests/test_metrics.py::test_percentile PASSED                            [ 42%]
+tests/test_metrics.py::test_report_dict_contains_required_metrics PASSED [ 46%]
+tests/test_no_retry_storm.py::test_open_breaker_skips_provider PASSED    [ 50%]
+tests/test_redis_cache.py::test_redis_connection SKIPPED (Redis not ...) [ 53%]
+tests/test_redis_cache.py::test_set_and_exact_get SKIPPED (Redis not...) [ 57%]
+tests/test_redis_cache.py::test_ttl_expiry SKIPPED (Redis not runnin...) [ 61%]
+tests/test_redis_cache.py::test_shared_state_across_instances SKIPPED    [ 65%]
+tests/test_redis_cache.py::test_privacy_query_not_cached SKIPPED (Re...) [ 69%]
+tests/test_redis_cache.py::test_false_hit_different_years SKIPPED (R...) [ 73%]
+tests/test_similarity.py::test_exact_match_scores_one PASSED             [ 76%]
+tests/test_similarity.py::test_completely_different_low_score PASSED     [ 80%]
+tests/test_similarity.py::test_year_diff_below_92_threshold PASSED       [ 84%]
+tests/test_similarity.py::test_privacy_query_not_cached PASSED           [ 88%]
+tests/test_similarity.py::test_false_hit_year_diff_blocks_lookup PASSED  [ 92%]
+tests/test_similarity.py::test_similar_safe_queries_match PASSED         [ 96%]
+tests/test_todo_requirements.py::test_semantic_cache_should_not_false_hit_different_intent PASSED [100%]
+
+======================== 20 passed, 6 skipped in 6.85s ========================

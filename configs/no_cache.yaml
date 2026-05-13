@@ -12,8 +12,8 @@ circuit_breaker:
   reset_timeout_seconds: 2
   success_threshold: 2
 cache:
-  enabled: true
-  backend: memory          # "memory" (default) or "redis" (requires docker compose up -d)
+  enabled: false
+  backend: memory
   ttl_seconds: 300
   similarity_threshold: 0.85
   redis_url: "redis://localhost:6379/0"
@@ -35,6 +35,3 @@ scenarios:
     provider_overrides:
       primary: 0.0
       backup: 0.0
-  - name: cache_stale_candidate
-    description: "Date-sensitive queries should trigger false-hit guardrail"
-    provider_overrides: {}
