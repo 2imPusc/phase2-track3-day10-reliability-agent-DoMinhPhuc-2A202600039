@@ -1,0 +1,6 @@
+c1.set -> c2.get
+  response: None
+  score:    0.00
+
+Note: this run executed while Docker Desktop was not running on the developer machine.
+Once Docker is started (docker compose up -d), re-run scripts/verify_shared_cache.py to capture genuine shared-state output.
