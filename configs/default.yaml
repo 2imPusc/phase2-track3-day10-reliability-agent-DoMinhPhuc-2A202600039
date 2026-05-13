@@ -32,7 +32,9 @@ scenarios:
       primary: 0.5
   - name: all_healthy
     description: "Baseline — both providers healthy"
-    provider_overrides: {}
+    provider_overrides:
+      primary: 0.0
+      backup: 0.0
   - name: cache_stale_candidate
     description: "Date-sensitive queries should trigger false-hit guardrail"
     provider_overrides: {}
