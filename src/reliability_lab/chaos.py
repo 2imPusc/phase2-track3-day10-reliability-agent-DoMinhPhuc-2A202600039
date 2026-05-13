@@ -104,6 +104,11 @@ def run_scenario(
     # query scores above the similarity threshold yet triggers _looks_like_false_hit
     # (seed nums = {2024, 2026} != query nums = {2026} or {2024}).
     if scenario.name == "cache_stale_candidate" and gateway.cache is not None:
+        # Flush any contaminating state (Redis persists across scenarios) so the
+        # seed below is the only similarity-match candidate during the first
+        # year-query draw.
+        if hasattr(gateway.cache, "flush"):
+            gateway.cache.flush()
         gateway.cache.set(
             "Summarize refund policy for 2026 deadline policy 2024",
             "Old refund policy text",
