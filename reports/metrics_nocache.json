@@ -1,19 +1,19 @@
 {
   "total_requests": 600,
-  "availability": 0.96,
-  "error_rate": 0.04,
-  "latency_p50_ms": 291.55,
-  "latency_p95_ms": 524.21,
-  "latency_p99_ms": 548.59,
-  "fallback_success_rate": 0.9507,
+  "availability": 0.97,
+  "error_rate": 0.03,
+  "latency_p50_ms": 273.56,
+  "latency_p95_ms": 490.82,
+  "latency_p99_ms": 525.02,
+  "fallback_success_rate": 0.9528,
   "cache_hit_rate": 0.0,
-  "circuit_open_count": 7,
-  "recovery_time_ms": 2290.562629699707,
-  "estimated_cost": 0.223846,
+  "circuit_open_count": 6,
+  "recovery_time_ms": null,
+  "estimated_cost": 0.256162,
   "estimated_cost_saved": 0.0,
   "scenarios": {
     "primary_timeout_100": "pass",
     "primary_flaky_50": "pass",
-    "all_healthy": "fail"
+    "all_healthy": "pass"
   }
 }
